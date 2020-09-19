@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class Cliente {
 
     @Id
-    private int id;
+    private int id_;
     @Column
     private String nome;
     @Column
@@ -19,10 +19,10 @@ public class Cliente {
     private String rg;
 
     public int getId() {
-        return id;
+        return id_;
     }
     public void setId(int id) {
-        this.id = id;
+        this.id_ = id;
     }
     public String getNome() {
         return nome;
@@ -41,5 +41,15 @@ public class Cliente {
     }
     public void setRg(String rg) {
         this.rg = rg;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id_ +
+                ", nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", rg='" + rg + '\'' +
+                '}';
     }
 }
